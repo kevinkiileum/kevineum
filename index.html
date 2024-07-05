@@ -15,6 +15,7 @@
             --taskbar-color: #c0c0c0;
             --taskbar-border: #ffffff;
             --start-button-color: #008080;
+            --time-weather-text-color: #000000;
         }
 
         * {
@@ -179,65 +180,76 @@
             text-decoration: none;
             display: inline-block;
         }
+
+        #time {
+            margin-left: auto;
+            margin-right: 10px;
+            color: var(--time-weather-text-color);
+        }
+
+        #weather {
+            margin-right: 10px;
+            color: var(--time-weather-text-color);
+        }
     </style>
 </head>
 <body>
     <div id="desktop">
-<div id="icon-container">
-    <div class="icon" onclick="openWindow('about')">
-        <div class="icon-image">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <circle cx="12" cy="8" r="4"/>
-                <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
-            </svg>
+        <div id="icon-container">
+            <div class="icon" onclick="openWindow('about')">
+                <div class="icon-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                    </svg>
+                </div>
+                <span>About Me</span>
+            </div>
+            <div class="icon" onclick="openWindow('projects')">
+                <div class="icon-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <span>Projects</span>
+            </div>
+            <div class="icon" onclick="openWindow('skills')">
+                <div class="icon-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </div>
+                <span>Skills</span>
+            </div>
+            <div class="icon" onclick="openWindow('contact')">
+                <div class="icon-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                <span>Contact</span>
+            </div>
+            <div class="icon" onclick="openWindow('experience')">
+                <div class="icon-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                </div>
+                <span>Experience</span>
+            </div>
+            <div class="icon" onclick="openWindow('resume')">
+                <div class="icon-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+                        <path d="M14 2v6h6"/>
+                        <path d="M16 13h-8m0 4h8"/>
+                    </svg>
+                </div>
+                <span>Resume</span>
+            </div>
         </div>
-        <span>About Me</span>
-    </div>
-    <div class="icon" onclick="openWindow('projects')">
-        <div class="icon-image">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-            </svg>
-        </div>
-        <span>Projects</span>
-    </div>
-    <div class="icon" onclick="openWindow('skills')">
-        <div class="icon-image">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-            </svg>
-        </div>
-        <span>Skills</span>
-    </div>
-    <div class="icon" onclick="openWindow('contact')">
-        <div class="icon-image">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-            </svg>
-        </div>
-        <span>Contact</span>
-    </div>
-    <div class="icon" onclick="openWindow('experience')">
-        <div class="icon-image">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-            </svg>
-        </div>
-        <span>Experience</span>
-    </div>
-    <div class="icon" onclick="openWindow('resume')">
-        <div class="icon-image">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-                <path d="M14 2v6h6"/>
-                <path d="M16 13h-8m0 4h8"/>
-            </svg>
-        </div>
-        <span>Resume</span>
-    </div>
-</div>
     </div>
 
     <div id="about" class="window">
@@ -324,6 +336,8 @@
 
     <div id="taskbar">
         <div id="start-button" onclick="toggleStartMenu()">Start</div>
+        <div id="time"></div>
+        <div id="weather"></div>
     </div>
 
     <div id="cmd-line">
@@ -433,4 +447,64 @@
             openWindow(windowId);
         });
     });
-</script>
+
+    function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        document.getElementById('time').textContent = timeString;
+    }
+
+    async function getWeather(lat = null, lon = null) {
+        const apiKey = '38b57550e9bc42b8bfa860ffa0bf3c84'; // Your actual API key
+        let url;
+
+        if (lat && lon) {
+            url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        } else {
+            const city = 'Vancouver';
+            url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        }
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            const city = data.name;
+            const temp = Math.round(data.main.temp);
+            const description = data.weather[0].description;
+            document.getElementById('weather').textContent = `${city}: ${temp}°C, ${description}`;
+        } catch (error) {
+            console.error('Error fetching weather:', error);
+            document.getElementById('weather').textContent = 'Weather data unavailable';
+        }
+    }
+
+    function getLocationAndWeather() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                getWeather(lat, lon);
+            }, error => {
+                console.error('Error getting location:', error);
+                document.getElementById('weather').textContent = 'Location not available';
+                getWeather(); // Fetch weather for default city if geolocation fails
+            });
+        } else {
+            console.error('Geolocation is not supported by this browser.');
+            document.getElementById('weather').textContent = 'Geolocation not supported';
+            getWeather(); // Fetch weather for default city if geolocation is not supported
+        }
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+
+    // Fetch location and weather data every 10 minutes
+    getLocationAndWeather();
+    setInterval(getLocationAndWeather, 600000);
+    </script>
+</body>
+</html>
