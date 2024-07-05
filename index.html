@@ -149,6 +149,16 @@
             font-size: 1em;
             outline: none;
         }
+
+        .download-button {
+            margin-top: 40px; /* Increased margin-top */
+            padding: 5px 10px;
+            background-color: #008080;
+            color: #ffffff;
+            border: 2px outset var(--taskbar-border);
+            cursor: pointer;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -187,6 +197,16 @@
                     </svg>
                 </div>
                 <span>Contact</span>
+            </div>
+            <div class="icon" onclick="openWindow('resume')">
+                <div class="icon-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+                        <path d="M14 2v6h6"/>
+                        <path d="M16 13h-8m0 4h8"/>
+                    </svg>
+                </div>
+                <span>Resume</span>
             </div>
         </div>
     </div>
@@ -247,6 +267,18 @@
         </div>
     </div>
 
+    <div id="resume" class="window">
+        <div class="window-header">
+            <span>Resume</span>
+            <span class="close-btn" onclick="closeWindow('resume')">X</span>
+        </div>
+        <div class="window-content">
+            <h2>My Resume</h2>
+            <p href="https://github.com/kevinkiileum/portfolio/raw/main/resume.pdf" download="Kevin_Eum_Resume.pdf" class="download-button">Download Resume</a>
+            <p></p>
+        </div>
+    </div>
+
     <div id="taskbar">
         <div id="start-button" onclick="toggleStartMenu()">Start</div>
     </div>
@@ -298,8 +330,11 @@
                     case 'contact':
                         openWindow('contact');
                         break;
+                    case 'resume':
+                        openWindow('resume');
+                        break;
                     case 'help':
-                        alert('Available commands: about, projects, skills, contact');
+                        alert('Available commands: about, projects, skills, contact, resume');
                         break;
                     default:
                         alert('Command not recognized. Type "help" for available commands.');
