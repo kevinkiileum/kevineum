@@ -49,18 +49,19 @@
         #desktop {
             height: calc(100vh - 30px);
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: flex-start;
             padding: 20px;
         }
 
         #icon-container {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
             gap: 20px;
-            max-width: 100%;
+            max-height: 100%;
+            padding-top: 20px;
         }
 
         .icon {
@@ -182,52 +183,61 @@
 </head>
 <body>
     <div id="desktop">
-        <div id="icon-container">
-            <div class="icon" onclick="openWindow('about')">
-                <div class="icon-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
-                    </svg>
-                </div>
-                <span>About Me</span>
-            </div>
-            <div class="icon" onclick="openWindow('projects')">
-                <div class="icon-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-                    </svg>
-                </div>
-                <span>Projects</span>
-            </div>
-            <div class="icon" onclick="openWindow('skills')">
-                <div class="icon-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                    </svg>
-                </div>
-                <span>Skills</span>
-            </div>
-            <div class="icon" onclick="openWindow('contact')">
-                <div class="icon-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                </div>
-                <span>Contact</span>
-            </div>
-            <div class="icon" onclick="openWindow('resume')">
-                <div class="icon-image">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-                        <path d="M14 2v6h6"/>
-                        <path d="M16 13h-8m0 4h8"/>
-                    </svg>
-                </div>
-                <span>Resume</span>
-            </div>
+<div id="icon-container">
+    <div class="icon" onclick="openWindow('about')">
+        <div class="icon-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+            </svg>
         </div>
+        <span>About Me</span>
+    </div>
+    <div class="icon" onclick="openWindow('projects')">
+        <div class="icon-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+            </svg>
+        </div>
+        <span>Projects</span>
+    </div>
+    <div class="icon" onclick="openWindow('skills')">
+        <div class="icon-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+        </div>
+        <span>Skills</span>
+    </div>
+    <div class="icon" onclick="openWindow('contact')">
+        <div class="icon-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+            </svg>
+        </div>
+        <span>Contact</span>
+    </div>
+    <div class="icon" onclick="openWindow('experience')">
+        <div class="icon-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+        </div>
+        <span>Experience</span>
+    </div>
+    <div class="icon" onclick="openWindow('resume')">
+        <div class="icon-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M16 13h-8m0 4h8"/>
+            </svg>
+        </div>
+        <span>Resume</span>
+    </div>
+</div>
     </div>
 
     <div id="about" class="window">
@@ -297,6 +307,21 @@
         </div>
     </div>
 
+    <div id="experience" class="window">
+        <div class="window-header">
+            <span>Experience</span>
+            <span class="close-btn" onclick="closeWindow('experience')">X</span>
+        </div>
+        <div class="window-content">
+            <h2>My Experience</h2>
+            <ul>
+                <li>Web Developer | Hanbibi | Nov 2023 - May 2024</li>
+                <li>AI Engineer Intern | Radical AI | July 2024 - Present</li>
+                <!-- Add more jobs as needed -->
+            </ul>
+        </div>
+    </div>
+
     <div id="taskbar">
         <div id="start-button" onclick="toggleStartMenu()">Start</div>
     </div>
@@ -307,92 +332,105 @@
     </div>
 
     <script>
-        function openWindow(id) {
-            const window = document.getElementById(id);
+    function openWindow(id) {
+        const window = document.getElementById(id);
+        if (window) {
             window.style.display = 'flex';
             window.style.left = `${Math.random() * (document.body.clientWidth - 300)}px`;
             window.style.top = `${Math.random() * (document.body.clientHeight - 230)}px`;
+        } else {
+            console.error(`Window with id ${id} not found`);
         }
+    }
 
-        function closeWindow(id) {
-            document.getElementById(id).style.display = 'none';
+    function closeWindow(id) {
+        const window = document.getElementById(id);
+        if (window) {
+            window.style.display = 'none';
+        } else {
+            console.error(`Window with id ${id} not found`);
         }
+    }
 
-        function toggleStartMenu() {
-            toggleCommandLine();
+    function toggleStartMenu() {
+        toggleCommandLine();
+    }
+
+    function toggleCommandLine() {
+        const cmdLine = document.getElementById('cmd-line');
+        cmdLine.style.display = cmdLine.style.display === 'none' ? 'block' : 'none';
+        if (cmdLine.style.display === 'block') {
+            document.getElementById('cmd-input').focus();
         }
+    }
 
-        function toggleCommandLine() {
-            const cmdLine = document.getElementById('cmd-line');
-            cmdLine.style.display = cmdLine.style.display === 'none' ? 'block' : 'none';
-            if (cmdLine.style.display === 'block') {
-                document.getElementById('cmd-input').focus();
+    function handleCommand(event) {
+        if (event.key === 'Enter') {
+            const command = event.target.value.toLowerCase();
+            event.target.value = '';
+            
+            switch(command) {
+                case 'about':
+                case 'projects':
+                case 'skills':
+                case 'contact':
+                case 'resume':
+                case 'experience':
+                    openWindow(command);
+                    break;
+                case 'help':
+                    alert('Available commands: about, projects, skills, contact, resume, experience');
+                    break;
+                default:
+                    alert('Command not recognized. Type "help" for available commands.');
             }
         }
+    }
 
-        function handleCommand(event) {
-            if (event.key === 'Enter') {
-                const command = event.target.value.toLowerCase();
-                event.target.value = '';
-                
-                switch(command) {
-                    case 'about':
-                        openWindow('about');
-                        break;
-                    case 'projects':
-                        openWindow('projects');
-                        break;
-                    case 'skills':
-                        openWindow('skills');
-                        break;
-                    case 'contact':
-                        openWindow('contact');
-                        break;
-                    case 'resume':
-                        openWindow('resume');
-                        break;
-                    case 'help':
-                        alert('Available commands: about, projects, skills, contact, resume');
-                        break;
-                    default:
-                        alert('Command not recognized. Type "help" for available commands.');
-                }
-            }
+    // Make windows draggable
+    const windows = document.querySelectorAll('.window');
+    windows.forEach(makeWindowDraggable);
+
+    function makeWindowDraggable(element) {
+        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        const header = element.querySelector('.window-header');
+        if (header) {
+            header.onmousedown = dragMouseDown;
+        } else {
+            console.error('Window header not found');
         }
 
-        // Make windows draggable
-        const windows = document.querySelectorAll('.window');
-        windows.forEach(makeWindowDraggable);
-
-        function makeWindowDraggable(element) {
-            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-            element.querySelector('.window-header').onmousedown = dragMouseDown;
-
-            function dragMouseDown(e) {
-                e = e || window.event;
-                e.preventDefault();
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                document.onmouseup = closeDragElement;
-                document.onmousemove = elementDrag;
-            }
-
-            function elementDrag(e) {
-                e = e || window.event;
-                e.preventDefault();
-                pos1 = pos3 - e.clientX;
-                pos2 = pos4 - e.clientY;
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                element.style.top = (element.offsetTop - pos2) + "px";
-                element.style.left = (element.offsetLeft - pos1) + "px";
-            }
-
-            function closeDragElement() {
-                document.onmouseup = null;
-                document.onmousemove = null;
-            }
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
         }
-    </script>
-</body>
-</html>
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            element.style.top = (element.offsetTop - pos2) + "px";
+            element.style.left = (element.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+
+    // Add click event listeners to all icons
+    document.querySelectorAll('.icon').forEach(icon => {
+        icon.addEventListener('click', function() {
+            const windowId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+            openWindow(windowId);
+        });
+    });
+</script>
