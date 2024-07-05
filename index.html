@@ -42,11 +42,11 @@
 
         #icon-container {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             gap: 20px;
-            max-width: 400px;
+            max-width: 100%;
         }
 
         .icon {
@@ -151,13 +151,15 @@
         }
 
         .download-button {
-            margin-top: 40px; /* Increased margin-top */
+            margin-top: 40px;
             padding: 5px 10px;
             background-color: #008080;
             color: #ffffff;
             border: 2px outset var(--taskbar-border);
             cursor: pointer;
             text-align: center;
+            text-decoration: none;
+            display: inline-block;
         }
     </style>
 </head>
@@ -274,8 +276,7 @@
         </div>
         <div class="window-content">
             <h2>My Resume</h2>
-            <p href="https://github.com/kevinkiileum/kevineum/blob/main/resume.pdf" class="download-button">Download Resume</a>
-            <p></p>
+            <a href="https://raw.githubusercontent.com/kevinkiileum/kevineum/main/resume.pdf" class="download-button" download="Kevin_Eum_Resume.pdf">Download Resume</a>
         </div>
     </div>
 
